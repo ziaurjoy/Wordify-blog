@@ -1,0 +1,37 @@
+{% load static %}
+{% include 'partials/header.html' %}
+
+    <div class="wrap">
+
+      <header role="banner">
+        {% include 'partials/header_top_banner.html' %}
+
+        {% include 'partials/header_navbar.html' %}
+      </header>
+      <!-- END header -->
+      {% include 'partials/header_slider.html'%}
+      <!-- END section -->
+
+      <section class="site-section py-sm">
+        <div class="container">
+
+          <div class="row blog-entries">
+            <div class="col-md-12 col-lg-8 main-content">
+              {% block containt %}
+
+              {% endblock %}
+            </div>
+            <!-- END main-content -->
+
+          {% include 'partials/sidebar.html' %}
+            <!-- END sidebar -->
+
+          </div>
+        </div>
+      </section>
+    
+      {% include 'partials/footer.html' %}
+      <!-- END footer -->
+    </div>
+    <!-- loader -->
+  {% include 'partials/js.html' %}
