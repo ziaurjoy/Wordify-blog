@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<img src="{{ post.photo.url }}" alt="Image" class="img-fluid mb-5">
+
+ <div class="post-meta">
+    <span class="author mr-2"><img src="images/person_1.jpg" alt="User" class="mr-2"> {{ post.author }}</span>&bullet;
+    <span class="mr-2">{{ post.create_on }} </span> &bullet;
+    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+ </div>
+<h1 class="mb-4">{{ post.title }}</h1>
+
+<a class="category mb-5" href="#">Food</a> <a class="category mb-5" href="#">Travel</a>
+
+<div class="post-content-body">
+    <p>{{ post.body }}</p>
+</div>
+
+{% endblock %}
